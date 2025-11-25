@@ -251,6 +251,3 @@ Feedstock Maintainers
 * [@chrisguidry](https://github.com/chrisguidry/)
 * [@zzstoatzz](https://github.com/zzstoatzz/)
 
-
-<!-- dummy commit to enable rerendering -->
-
