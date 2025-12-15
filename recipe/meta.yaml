@@ -30,7 +30,7 @@ requirements:
     - cloudpickle >=3.1.1
     - exceptiongroup >=1.2.0
     - fakeredis >=2.32.1
-    - lupa >=2.0
+    - lupa >=2.0  # [py<313]
     - opentelemetry-api >=1.30.0
     - opentelemetry-exporter-prometheus >=0.51b0
     - prometheus_client >=0.21.1
