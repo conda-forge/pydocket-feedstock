@@ -10,12 +10,15 @@ source:
   sha256: c4d3c8d221251eb57c98c0e69aa60adf1eba163afcfeded01c8f32b2e4aaae37
 
 build:
-  number: 0
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - docket = docket.__main__:app
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
@@ -27,6 +30,7 @@ requirements:
     - cloudpickle >=3.1.1
     - exceptiongroup >=1.2.0
     - fakeredis >=2.32.1
+    - lupa >=2.0  # [py<313]
     - opentelemetry-api >=1.30.0
     - opentelemetry-exporter-prometheus >=0.51b0
     - prometheus_client >=0.21.1
