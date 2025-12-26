@@ -26,7 +26,7 @@ requirements:
     - hatch-vcs
   run:
     - python
-    - cachetools >=5.0.0  # from py-key-value-aio[memory]
+    - cachetools >=5.0.0
     - cloudpickle >=3.1.1
     - exceptiongroup >=1.2.0  # [py<311]
     - fakeredis >=2.32.1
