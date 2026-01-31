@@ -1,5 +1,5 @@
 {% set name = "pydocket" %}
-{% set version = "0.17.3" %}
+{% set version = "0.17.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8922b4ca5f3f428e69b7695b9b5a313bbedc3ce35c74045cadcd89f7c0e6ac2d
+  sha256: 42a5f9d8b659fc6b5468f996cc171983b6cc28b3a56420f691a7a67f3832fabf
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - python
     - cachetools >=5.0.0
     - cloudpickle >=3.1.1
+    - croniter >=6
     - exceptiongroup >=1.2.0  # [py<311]
     - fakeredis >=2.32.1
     - lupa >=2.0  # [py<313]
