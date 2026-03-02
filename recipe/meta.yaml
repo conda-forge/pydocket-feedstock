@@ -10,7 +10,7 @@ source:
   sha256: 929628c70ee7d3bcae5f142c41f362147510e8f5d04b7030e5c5dd078b8c7f2a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - docket = docket.__main__:app
@@ -65,3 +65,4 @@ extra:
   recipe-maintainers:
     - chrisguidry
     - zzstoatzz
+    - dbast
