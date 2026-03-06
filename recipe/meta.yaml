@@ -1,5 +1,5 @@
 {% set name = "pydocket" %}
-{% set version = "0.18.0" %}
+{% set version = "0.18.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd5b6e7386331ca05a0163401f392b08b07e61342b5333c3ece6a7ca5435f984
+  sha256: 7c9410c68c9cc4171e3718f4b691dbae0ed1fc5b108adbcf8f30a915fc645d28
 
 build:
   number: 0
