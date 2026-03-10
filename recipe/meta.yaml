@@ -1,5 +1,5 @@
 {% set name = "pydocket" %}
-{% set version = "0.18.0" %}
+{% set version = "0.18.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd5b6e7386331ca05a0163401f392b08b07e61342b5333c3ece6a7ca5435f984
+  sha256: cc2051d15557f83bb164a83b0743fa9c12c2bfe9a9145cff3a5922b4935ce4f5
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - python
     - cachetools >=5.0.0
     - cloudpickle >=3.1.1
-    - croniter >=6
+    - cronsim >=2.6
     - exceptiongroup >=1.2.0  # [py<311]
     - fakeredis >=2.32.1
     - lupa >=2.0  # [py<313]
