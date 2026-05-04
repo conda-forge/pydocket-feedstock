@@ -10,7 +10,7 @@ source:
   sha256: 4b5132a5754ba54f894d46bf2cbdc12e237adada73bc76ca367017536098df7f
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - docket = docket.__main__:app
@@ -26,12 +26,10 @@ requirements:
     - hatch-vcs
   run:
     - python
-    - cachetools >=5.0.0
+    - burner-redis >=0.1.6
     - cloudpickle >=3.1.1
     - cronsim >=2.6
     - exceptiongroup >=1.2.0  # [py<311]
-    - fakeredis >=2.32.1
-    - lupa >=2.0  # [py<313]
     - taskgroup >=0.2.2  # [py<311]
     - opentelemetry-api >=1.33.0
     - opentelemetry-exporter-prometheus >=0.60b0
@@ -39,6 +37,7 @@ requirements:
     - prometheus_client >=0.21.1
     - py-key-value-aio >=0.3.0
     - python-json-logger >=2.0.7
+    - python-tzdata >=2025.2  # [win]
     - redis-py >=5
     - rich >=13.9.4
     - typer >=0.15.1
