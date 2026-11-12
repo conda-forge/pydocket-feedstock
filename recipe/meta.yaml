@@ -1,5 +1,5 @@
 {% set name = "pydocket" %}
-{% set version = "0.24.1" %}
+{% set version = "0.27.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 477d77be1fcfd10ee0c2d0b8aa8c6e97851b9c7f39bb6f2b4e6d42e9b4d6e95a
+  sha256: 472c1f91c1b3940c639aab37b2272f4504f8400d6d8956a13d508925d847f234
 
 build:
   number: 0
@@ -26,27 +26,31 @@ requirements:
     - hatch-vcs
   run:
     - python
-    - burner-redis >=0.1.6
+    - burner-redis >=0.1.7
+    - cachetools >=5.0.0
     - cloudpickle >=3.1.1
     - cronsim >=2.6
     - exceptiongroup >=1.2.0  # [py<311]
     - taskgroup >=0.2.2  # [py<311]
-    - opentelemetry-api >=1.33.0
-    - opentelemetry-exporter-prometheus >=0.60b0
-    - opentelemetry-instrumentation >=0.60b0
+    - opentelemetry-api >=1.45.1
     - prometheus_client >=0.21.1
     - py-key-value-aio >=0.3.0
     - python-json-logger >=2.0.7
     - python-tzdata >=2025.2  # [win]
-    - redis-py >=5
+    - redis-py >=6
     - rich >=13.9.4
     - typer >=0.15.1
     - typing-extensions >=4.12.0
-    - uncalled-for >=0.2.0
+    - uncalled-for >=0.4.0
 
 test:
   imports:
     - docket
+  requires:
+    - pip
+  commands:
+    - pip check
+    - docket --help
 
 about:
   home: https://github.com/chrisguidry/docket
