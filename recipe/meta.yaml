@@ -37,11 +37,11 @@ requirements:
     - py-key-value-aio >=0.3.0
     - python-json-logger >=2.0.7
     - python-tzdata >=2025.2  # [win]
-    - redis-py >=6
+    - redis-py >=6.2
     - rich >=13.9.4
     - typer >=0.15.1
     - typing-extensions >=4.12.0
-    - uncalled-for >=0.4.0
+    - uncalled-for >=0.6.0
 
 test:
   imports:
