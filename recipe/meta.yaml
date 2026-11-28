@@ -1,5 +1,5 @@
 {% set name = "pydocket" %}
-{% set version = "0.32.1" %}
+{% set version = "0.33.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8dc27a45f6b3fd4a2833f1f16bcd0be67e32543a5b1fceb4a3c7bf4663f9bdcf
+  sha256: c43bcfad52886398d057ea8e21d6b71ec797a62de1cff2413488532ca8973c7e
 
 build:
   number: 0
